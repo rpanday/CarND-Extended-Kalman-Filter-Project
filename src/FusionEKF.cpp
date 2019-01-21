@@ -44,7 +44,7 @@ FusionEKF::FusionEKF() {
             0, 0, 0, 1000;
   
    // measurement matrix
-  H_ << 1, 0, 0, 0,
+  H_laser_ << 1, 0, 0, 0,
         0, 1, 0, 0;
   
   Hj_ << 1, 1, 0, 0,

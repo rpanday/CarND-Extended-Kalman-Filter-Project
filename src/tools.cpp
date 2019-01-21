@@ -4,6 +4,8 @@
 using Eigen::VectorXd;
 using Eigen::MatrixXd;
 using std::vector;
+using std::endl;
+using std::cout;
 
 Tools::Tools() {}
 
@@ -28,7 +30,7 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
   //  * the estimation vector size should equal ground truth vector size
 
   // TODO: accumulate squared residuals
-  for (int i=0; i < estimations.size(); ++i) {
+  for (unsigned int i=0; i < estimations.size(); ++i) {
     // ... your code here
     VectorXd diff = (estimations[i] - ground_truth[i]);
     diff = diff.array()*diff.array();
